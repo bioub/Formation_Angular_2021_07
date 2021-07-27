@@ -1,0 +1,21 @@
+<div class="selected" (click)="open = !open">{{ selected }}</div>
+
+<div class="items" *ngIf="open">
+  <div
+    class="item"
+    [ngClass]="{ active: selected === item }"
+    (click)="handleSelect(item)"
+    *ngFor="let item of items"
+  >
+    {{ item }}
+  </div>
+</div>
+
+<p>Nombre d'élément dans la liste {{items | count}}</p>
+<!-- <ng-template [ngIf]="open">
+  <div class="items">
+    <div class="item" (click)="selected = 'A'">A</div>
+    <div class="item" (click)="selected = 'B'">B</div>
+    <div class="item" (click)="selected = 'C'">C</div>
+  </div>
+</ng-template> -->

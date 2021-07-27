@@ -15,3 +15,19 @@
 
 <h2>clock (detection de changement, lifecycle hooks)</h2>
 <app-clock></app-clock>
+
+<h2>select (directives, structural directive)</h2>
+<app-select
+  [items]="['Rouge', 'Vert', 'Bleu']"
+  [selected]="selectedColor"
+  (selectedChange)="selectedColor = $event"
+></app-select>
+
+<app-select
+  [items]="['Rouge', 'Vert', 'Bleu']"
+  [(selected)]="selectedColor"
+></app-select>
+
+<!-- [()] BANANA IN A BOX -->
+
+<p>Vous avez sélectionné : {{ selectedColor }}</p>

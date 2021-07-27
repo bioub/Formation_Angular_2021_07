@@ -10,9 +10,10 @@
       input.value = user.firstName;
     -->
   </div>
-  <div [attr.data-name]="user.lastName">
+  <div [attr.data-name]="user.lastName" [ngClass]="{error: !user.firstName, submitted}">
     Nom :
     <input
+      [appBackgroundInput]="!user.lastName && submitted"
       [value]="user.lastName"
       (input)="user.lastName = $any($event.target).value"
     />

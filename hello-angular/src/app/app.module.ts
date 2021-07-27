@@ -8,6 +8,9 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { HelloworldComponent } from './helloworld/helloworld.component';
 import { MultistatebuttonComponent } from './multistatebutton/multistatebutton.component';
 import { ClockComponent } from './clock/clock.component';
+import { BackgroundInputDirective } from './background-input.directive';
+import { SelectComponent } from './select/select.component';
+import { CountPipe } from './count.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ClockComponent } from './clock/clock.component';
     UserFormComponent,
     HelloworldComponent,
     MultistatebuttonComponent,
-    ClockComponent
+    ClockComponent,
+    BackgroundInputDirective,
+    SelectComponent,
+    CountPipe
   ],
   imports: [
     BrowserModule
