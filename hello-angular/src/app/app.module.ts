@@ -7,6 +7,7 @@ import { CounterComponent } from './counter/counter.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { HelloworldComponent } from './helloworld/helloworld.component';
 import { MultistatebuttonComponent } from './multistatebutton/multistatebutton.component';
+import { ClockComponent } from './clock/clock.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MultistatebuttonComponent } from './multistatebutton/multistatebutton.c
     CounterComponent,
     UserFormComponent,
     HelloworldComponent,
-    MultistatebuttonComponent
+    MultistatebuttonComponent,
+    ClockComponent
   ],
   imports: [
     BrowserModule

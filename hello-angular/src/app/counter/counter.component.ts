@@ -16,5 +16,6 @@ export class CounterComponent implements OnInit {
 
   increment() {
     this.count++;
+    // detectChanges() auto (car (click) dans le template)
   }
 }

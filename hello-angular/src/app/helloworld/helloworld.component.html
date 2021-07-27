@@ -1,10 +1,12 @@
 <div>
-  Prénom : <input />
+  Prénom : <input #inputEl [value]="name" (input)="name = $any($event.target).value" />
 </div>
 <p>
-  Bonjour AFFICHER_LE_PRENOM_ICI
+  Bonjour {{ name }}
 </p>
-
+<p>
+  Valeur actuelle : {{inputEl.value}}
+</p>
 <!--
   créer une propriété name sur votre composant
   afficher cette propriété dans le champ et à la place
