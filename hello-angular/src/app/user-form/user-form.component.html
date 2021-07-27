@@ -1,0 +1,24 @@
+<form (submit)="doSomething($event)">
+  <div [class.error]="!user.firstName" [class.submitted]="submitted">
+    Prénom :
+    <input
+      [style.backgroundColor]="!user.firstName && submitted ? 'red': 'white'"
+      [value]="user.firstName"
+      (input)="user.firstName = $any($event.target).value"
+    />
+    <!--
+      input.value = user.firstName;
+    -->
+  </div>
+  <div [attr.data-name]="user.lastName">
+    Nom :
+    <input
+      [value]="user.lastName"
+      (input)="user.lastName = $any($event.target).value"
+    />
+  </div>
+  <div>Vous avez saisi : {{ user.firstName }} {{ user.lastName }}</div>
+  <div>
+    <button [disabled]="!user.firstName">+</button>
+  </div>
+</form>
