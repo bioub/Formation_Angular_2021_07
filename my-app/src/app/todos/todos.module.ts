@@ -21,7 +21,7 @@ import { SharedModule } from '../shared/shared.module';
     TodosRoutingModule
   ],
   exports: [
-    TodosComponent, // pour pouvoir m'en servir dans le template
+    // TodosComponent, // pour pouvoir m'en servir dans le template
     // d'un composant déclaré dans un autre module
   ]
 })

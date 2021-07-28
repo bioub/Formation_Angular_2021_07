@@ -1,27 +1,29 @@
-# MyApp
+# Exercices
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+## Routeur
 
-## Development server
+Créer un module `users` avec le module de routing avec la commande `ng generate module` (server vous des options -d et --help pour vérifier comment créer le module de routing)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Dans ce module ajouter 3 composants :
 
-## Code scaffolding
+- users
+- user-add
+- user-details
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Vérifier avec l'option -d avant de créer les composants qu'il seront bien créé dans users
 
-## Build
+Importer le module users dans AppModule en faisant attention à l'ordre des modules.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Créer 3 routes dans users-routing.module et vérifier que tout fonctionne
 
-## Running unit tests
+| Path          | Component              |
+| ------------- | ---------------------- |
+| `users`     | `UsersComponent`       |
+| `users/add` | `UserAddComponent`     |
+| `users/:id` | `UserDetailsComponent` |
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Créer un lien pour accéder à UserComponent dans la top-bar
 
-## Running end-to-end tests
+Créer des lien pour accéder à UserAddComponent et UserDetailsComponent dans le composant UserComponent
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+(Dans le path `'users/:id'`, `:id` devra être remplacé par un nombre au moment de créer le lien).

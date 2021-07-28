@@ -1,0 +1,7 @@
+<a routerLink="/" routerLinkActive="current" [routerLinkActiveOptions]="{exact: true}" #homeLink="routerLinkActive">Home</a>
+<a [routerLink]="'/about'" routerLinkActive="current">About</a>
+<a [routerLink]="['todos']" routerLinkActive="current">Todos</a>
+
+<!-- <a [routerLink]="['users', 123, 'update']">Update User 123</a> -->
+
+<p *ngIf="homeLink.isActive">Vous êtes sur la home</p>
