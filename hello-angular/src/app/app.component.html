@@ -19,6 +19,15 @@
 <h2>select (directives, structural directive)</h2>
 <app-select
   [items]="['Rouge', 'Vert', 'Bleu']"
+  [selected]="'Vert'"
+></app-select>
+<app-select
+  [items]="['Rouge', 'Vert', 'Bleu']"
+  selected="Vert"
+></app-select>
+
+<app-select
+  [items]="['Rouge', 'Vert', 'Bleu']"
   [selected]="selectedColor"
   (selectedChange)="selectedColor = $event"
 ></app-select>
@@ -27,6 +36,11 @@
   [items]="['Rouge', 'Vert', 'Bleu']"
   [(selected)]="selectedColor"
 ></app-select>
+
+<!-- <app-multistatebutton
+  [items]="['Rouge', 'Vert', 'Bleu']"
+  [(selected)]="selectedColor"
+></app-multistatebutton> -->
 
 <!-- [()] BANANA IN A BOX -->
 

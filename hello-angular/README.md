@@ -1,27 +1,24 @@
-# HelloAngular
+# Exercices
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+## Input / Output
 
-## Development server
+### Exercice 1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Sur le modèle de `app-select` ajouter les inputs `items` et `selected` à `app-multistatebutton`.
 
-## Code scaffolding
+Puis ajouter l'output `selectedChange` et émettre la valeur afficher une fois que l'on a cliqué
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Exercice 2
 
-## Build
+Slide 104
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Avec l'option --help de ng new, trouver l'option qui permet de modifier le préfixe des composant (par défaut app).
 
-## Running unit tests
+Créer un nouveau projet my-app avec prefix `my` et style `scss` + le router
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Le schéma de la slide 104 n'est du CSS, c'est un schéma qui montre la hierarchie et les interactions entre les composants :
 
-## Running end-to-end tests
+- app.component.html contient <my-todos>
+- todos.component.html contient <my-todo-form> et <my-todos-list>
+- todos-list.component.html contient <my-todo-item>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
