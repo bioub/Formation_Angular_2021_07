@@ -3,6 +3,10 @@
   user-select: none;
 }
 
+div {
+  background: red !important;
+}
+
 .selected {
   border: 1px solid black;
   border-radius: 3px;

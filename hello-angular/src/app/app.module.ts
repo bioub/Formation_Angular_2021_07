@@ -11,6 +11,7 @@ import { ClockComponent } from './clock/clock.component';
 import { BackgroundInputDirective } from './background-input.directive';
 import { SelectComponent } from './select/select.component';
 import { CountPipe } from './count.pipe';
+import { ClockWithControlsComponent } from './clock-with-controls/clock-with-controls.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CountPipe } from './count.pipe';
     ClockComponent,
     BackgroundInputDirective,
     SelectComponent,
-    CountPipe
+    CountPipe,
+    ClockWithControlsComponent
   ],
   imports: [
     BrowserModule
