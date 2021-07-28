@@ -1,0 +1,4 @@
+<form (submit)="handleSubmit($event)">
+  <input [value]="text" (input)="text = $any($event.target).value" />
+  <button>+</button>
+</form>

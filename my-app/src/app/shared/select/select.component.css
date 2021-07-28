@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  user-select: none;
+}
+
+.selected {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: white;
+  max-width: 250px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.items {
+  border: 1px solid black;
+  border-radius: 3px;
+  max-width: 250px;
+  box-sizing: border-box;
+}
+
+.item {
+  cursor: pointer;
+  padding: 5px;
+  background-color: white;
+}
+
+.item.active {
+  background-color: lightblue;
+}
