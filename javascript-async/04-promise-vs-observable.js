@@ -22,4 +22,8 @@ function interval(delay) {
 }
 
 interval(1000)
-  .subscribe(() => console.log('1s'));
+  .subscribe({
+    next: () => console.log('1s'),
+    error: (err) => console.log(err),
+    complete: () => console.log('DONE')
+  });
