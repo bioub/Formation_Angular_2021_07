@@ -1,2 +1,2 @@
 <my-todo-form (add)="handleAdd($event)"></my-todo-form>
-<my-todos-list [items]="todos"></my-todos-list>
+<my-todos-list [items]="todos" (delete)="handleDelete($event)"></my-todos-list>

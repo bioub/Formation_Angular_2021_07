@@ -4,7 +4,6 @@ import { MultistatebuttonComponent } from './multistatebutton/multistatebutton.c
 import { SelectComponent } from './select/select.component';
 
 
-
 @NgModule({
   declarations: [
     MultistatebuttonComponent,

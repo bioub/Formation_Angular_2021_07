@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  gap: 1em;
+}
+
+.menu {
+  width: 250px;
+
+  a {
+    display: block;
+    background-color: cadetblue;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+}
+
+.page-container {
+  flex: 1;
+}

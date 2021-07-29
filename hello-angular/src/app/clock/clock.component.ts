@@ -1,11 +1,12 @@
-import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-clock',
   templateUrl: './clock.component.html',
-  styleUrls: ['./clock.component.css']
+  styleUrls: ['./clock.component.css'],
 })
 export class ClockComponent implements OnInit, OnChanges, OnDestroy {
+
 
   @Input() format = 'HH:mm:ss';
   @Input() delay = 1000;
@@ -35,16 +36,33 @@ export class ClockComponent implements OnInit, OnChanges, OnDestroy {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.delay?.previousValue !== changes.delay?.currentValue) {
       console.log('ngOnChanges', this.delay, this.format);
-      clearInterval(this.interval);
-      this.interval = setInterval(() => {
-        this.now = new Date();
-        // detectChanges() auto (car le premier param de setInterval est callback asynchrone)
-      }, this.delay);
+      this.stop();
+      this.start();
+
     }
   }
 
-  ngOnDestroy(): void {
+  stop() {
     clearInterval(this.interval);
+  }
+
+  start() {
+    this.interval = setInterval(() => {
+      this.now = new Date();
+      // detectChanges() auto (car le premier param de setInterval est callback asynchrone)
+    }, this.delay);
+  }
+
+  ngOnDestroy(): void {
+    // open / close
+    // connect / disconnect
+    // create / destroy
+    // ex : setInterval / clearInterval
+    // addEventListener / removeEventListener
+    // new Websocket / ws.close
+    // new Worker / worker.destroy
+    // httpClient.get / unsubscribe
+    this.stop();
   }
 
 

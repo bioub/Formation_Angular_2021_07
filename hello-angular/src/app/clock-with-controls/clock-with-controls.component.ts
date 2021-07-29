@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ClockComponent } from '../clock/clock.component';
 
 @Component({
   selector: 'app-clock-with-controls',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClockWithControlsComponent implements OnInit {
 
+  @ViewChild(ClockComponent) clock!: ClockComponent;
   format = 'HH:mm:ss';
   delay = 1000;
   showClock = true;

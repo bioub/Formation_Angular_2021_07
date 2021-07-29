@@ -1,5 +1,14 @@
 :host {
-  display: block;
+  display: flex;
+  justify-content: space-around;
+  background-color: cadetblue;
+  padding: 1em;
+}
+
+a {
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
 }
 
 .current {
