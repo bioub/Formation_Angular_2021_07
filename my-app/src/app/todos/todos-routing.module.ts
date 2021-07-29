@@ -4,8 +4,11 @@ import { TodosComponent } from './todos/todos.component';
 
 const routes: Routes = [
   {
-    path: 'todos',
-    component: TodosComponent
+    path: '',
+    component: TodosComponent,
+    data: {
+      title: 'Todos'
+    }
   }
 ];
 
