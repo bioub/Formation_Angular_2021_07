@@ -1,8 +1,8 @@
 <div class="menu">
   <a routerLink="add" routerLinkActive="current">Add user</a>
-  <a routerLink="1" routerLinkActive="current">Jean Dupont</a>
-  <a routerLink="2" routerLinkActive="current">Eric Martin</a>
-  <a routerLink="3" routerLinkActive="current">Albert Morel</a>
+  <a *ngFor="let user of users" [routerLink]="[user.id]" routerLinkActive="current">
+    {{user.name}}
+  </a>
 </div>
 
 <div class="page-container">
