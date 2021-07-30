@@ -11,7 +11,8 @@ import { AboutComponent } from './core/about/about.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { TopBarComponent } from './core/top-bar/top-bar.component';
 // import { UsersModule } from './users/users.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpErrorInterceptor } from './core/http-error.interceptor';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule, // en dernier à cause de la route wildcard ** (qui doit charger en dernier)
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true,
+    }
     // Use existing pour aliaser un service par un autre
     // {
     //   provide: UserServiceWithCache,
