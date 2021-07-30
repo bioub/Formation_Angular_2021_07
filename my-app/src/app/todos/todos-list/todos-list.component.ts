@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from '../todo.model';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'my-todos-list',
@@ -13,7 +14,9 @@ export class TodosListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
   handleDelete(todo: Todo) {
     this.delete.emit(todo);

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { User } from '../user.model';
 import { UserService } from '../user.service';
 
@@ -27,9 +27,8 @@ export class UserDetailsComponent implements OnInit {
 
     this.activatedRoute.paramMap
       .pipe(
-        switchMap((paramMap) =>
-          this.userService.getById(paramMap.get('id') as string)
-        )
+        map((paramMap) => paramMap.get('id') as string),
+        switchMap((id) => this.userService.getById(id))
       )
       .subscribe((user) => {
         this.user = user;
