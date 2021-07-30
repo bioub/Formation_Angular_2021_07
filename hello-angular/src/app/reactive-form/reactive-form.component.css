@@ -1,0 +1,37 @@
+:host {
+  display: block;
+}
+/*
+input.ng-dirty.ng-invalid {
+  background-color: lightcoral;
+}
+
+input.ng-dirty.ng-valid {
+  background-color: lightgreen;
+} */
+
+
+/* input.ng-touched.ng-invalid {
+  background-color: lightcoral;
+}
+
+input.ng-touched.ng-valid {
+  background-color: lightgreen;
+} */
+
+/* span {
+  display: none;
+} */
+
+form.ng-submitted input.ng-invalid {
+  background-color: lightcoral;
+}
+
+/* form.ng-submitted input.ng-invalid + span {
+  display: block;
+} */
+
+form.ng-submitted input.ng-valid {
+  background-color: lightgreen;
+}
+

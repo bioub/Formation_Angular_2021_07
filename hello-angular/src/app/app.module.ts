@@ -12,6 +12,9 @@ import { BackgroundInputDirective } from './background-input.directive';
 import { SelectComponent } from './select/select.component';
 import { CountPipe } from './count.pipe';
 import { ClockWithControlsComponent } from './clock-with-controls/clock-with-controls.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,10 +28,15 @@ import { ClockWithControlsComponent } from './clock-with-controls/clock-with-con
     BackgroundInputDirective,
     SelectComponent,
     CountPipe,
-    ClockWithControlsComponent
+    ClockWithControlsComponent,
+    TemplateDrivenFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    // soit FormsModule soit ReactiveFormsModule dans un projet
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

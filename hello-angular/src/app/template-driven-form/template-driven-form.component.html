@@ -1,0 +1,18 @@
+<form #ngForm="ngForm" (ngSubmit)="ngForm.valid && handleSubmit($event)">
+  <div>
+    <!-- Email : <input type="email" name="email" [ngModel]="user.email" (ngModelChange)="user.username = $event" /> -->
+    Email : <input type="email" name="email" [(ngModel)]="user.email" required email minlength="3" #ngModelEmail="ngModel" />
+    <span *ngIf="ngForm.submitted && ngModelEmail.errors?.required">Ce champs est obligatoire</span>
+    <span *ngIf="ngForm.submitted && ngModelEmail.errors?.minlength">Ce champs doit faire au moins 3 caractères</span>
+    <span *ngIf="ngForm.submitted && ngModelEmail.errors?.email">Ce champs n'a pas le bon format d'email</span>
+  </div>
+  <div>
+    Password : <input type="password" name="password" [ngModel]="user.password" (ngModelChange)="user.password = $event" required pattern="\d+" />
+  </div>
+  <div>
+    <button>Login</button>
+  </div>
+  <p>
+    Vous avez saisi : {{user.email}} {{user.password}}
+  </p>
+</form>

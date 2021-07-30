@@ -1,0 +1,17 @@
+<form [formGroup]="formGroup" #ngForm="ngForm" (ngSubmit)="formGroup.valid && handleSubmit($event)">
+  <div>
+    Email : <input type="email" name="email" formControlName="email" />
+    <span *ngIf="ngForm.submitted && formGroup.get('email')?.errors?.required">Ce champs est obligatoire</span>
+    <span *ngIf="ngForm.submitted && formGroup.get('email')?.errors?.minlength">Ce champs doit faire au moins 3 caractères</span>
+    <span *ngIf="ngForm.submitted && formGroup.get('email')?.errors?.email">Ce champs n'a pas le bon format d'email</span>
+  </div>
+  <div>
+    Password : <input type="password" name="password" formControlName="password" />
+  </div>
+  <div>
+    <button>Login</button>
+  </div>
+  <p>
+    Vous avez saisi : {{formGroup.get('email')?.value }} {{formGroup.get('password')?.value}}
+  </p>
+</form>

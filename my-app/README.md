@@ -41,3 +41,22 @@ Créer une méthode getAll comme dans users qui enverra un requete GET vers http
 Injecter le TodoService dans TodoComponent et executer la requete dans ngOnInit pour remplir ou compléter le tableau.
 
 Bonus : avec l'opérateur map de RxJS et la méthode map du type Array (au niveau du service) retirer les clés userId de la réponse.
+
+## Forms
+
+Dans UserAddComponent, en utilisant le style de votre choix (Reactive Forms ou Template Driven Forms) créer un formulaire avec 3 champs :
+
+- name
+- email
+- phone
+
+Ajouter des validateurs required pour name et email, et email pour email.
+
+Valider les champs lorsque l'utilisateur quitte le champ (événément blur), afficher le champs en rouge ou en vert et afficher une erreur (champs obligatoire, format email incorrect).
+
+Ajouter une méthode create dans UserService qui recoit en entrée un User et qui retourne l'observable en utilisant la méthode post de HttpClient.
+
+Lorsque le formulaire est valide appeler la méthode create et souscrire à l'observable pour déclencher la requete
+
+Rediriger vers le composant User avec la méthode navigate du router.
+
